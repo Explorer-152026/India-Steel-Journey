@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="description" content="India's Steel Journey 1947–2026 — an interactive visual story of scale, capacity, process routes, value chain, policy, technology and the road to 2030.">
+<meta name="theme-color" content="#17324d">
+<meta property="og:title" content="India's Steel Journey · 1947–2026">
+<meta property="og:description" content="From nation-building to global scale: explore India's steel transformation, production, capacity, process-route mix and 2030 ambition.">
+<meta property="og:type" content="website">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India's Steel Journey | 1947–2026</title>
+<meta name="description" content="An editorial infographic based on the Ministry of Steel Annual Report 2025-26: India's steel journey from a 1 million tonne base at Independence to the world's second-largest crude steel producer.">
+<style>
+:root{
+  --ink:#10243e; --muted:#5f6f82; --paper:#f6f3ed; --card:#fffdf8;
+  --blue:#1c5d91; --blue2:#4b8dbd; --steel:#6d7d8d; --rust:#b55c37;
+  --green:#4f7657; --gold:#c89b4b; --line:#d8d2c7; --soft:#eaf1f5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1220px;margin:auto;padding:0 28px}
+.hero{background:linear-gradient(135deg,#0d2948 0%,#1b4f79 62%,#2f6d91 100%);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;right:-100px;bottom:-150px;width:560px;height:560px;border:1px solid rgba(255,255,255,.15);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.035),0 0 0 140px rgba(255,255,255,.025)}
+.hero-inner{padding:76px 28px 56px;position:relative;z-index:1}
+.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:800;color:#dbeaf5}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,6vw,78px);line-height:.98;margin:16px 0 18px;max-width:900px;font-weight:700}
+.hero p{font-size:19px;max-width:820px;color:#e8f0f5;margin:0}
+.hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.pill{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 13px;font-size:12px;background:rgba(255,255,255,.08)}
+.section{padding:64px 0}
+.section.alt{background:#ece9e1}
+.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--rust);font-weight:800}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:40px;line-height:1.08;margin:8px 0 12px}
+.lead{font-size:17px;color:var(--muted);max-width:840px}
+.grid{display:grid;gap:18px}
+.kpis{grid-template-columns:repeat(4,1fr);margin-top:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(16,36,62,.05)}
+.kpi .num{font-family:Georgia,serif;font-size:42px;font-weight:700;color:var(--blue)}
+.kpi .label{font-weight:750;margin-top:4px}
+.kpi .sub{font-size:13px;color:var(--muted);margin-top:7px}
+.chart-card{margin-top:22px;padding:20px}
+.chart-head{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}
+.chart-title{font-family:Georgia,serif;font-size:23px;font-weight:700}
+.legend{font-size:12px;color:var(--muted)}
+svg{max-width:100%;height:auto}
+.timeline{position:relative;margin-top:38px}
+.timeline:before{content:"";position:absolute;left:24px;top:0;bottom:0;width:2px;background:#c9c4ba}
+.titem{position:relative;padding:0 0 32px 66px}
+.dot{position:absolute;left:14px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--blue);border:4px solid var(--paper);box-shadow:0 0 0 2px var(--blue)}
+.titem:nth-child(3n) .dot{background:var(--rust);box-shadow:0 0 0 2px var(--rust)}
+.titem:nth-child(4n) .dot{background:var(--green);box-shadow:0 0 0 2px var(--green)}
+.year{font-weight:900;font-size:13px;color:var(--blue);letter-spacing:.08em}
+.titem h3{font-family:Georgia,serif;font-size:25px;margin:3px 0 5px}
+.titem p{margin:0;color:var(--muted);max-width:800px}
+.twocol{grid-template-columns:1.1fr .9fr}
+.three{grid-template-columns:repeat(3,1fr)}
+.four{grid-template-columns:repeat(4,1fr)}
+.route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.node{background:var(--soft);border:1px solid #d0dde6;padding:12px 14px;border-radius:10px;font-weight:750;font-size:13px}
+.arrow{color:var(--rust);font-size:20px;font-weight:800}
+.bar{height:12px;background:#e2ded5;border-radius:20px;overflow:hidden;margin-top:10px}
+.fill{height:100%;background:var(--blue)}
+.fill.green{background:var(--green)}
+.fill.rust{background:var(--rust)}
+.metric{display:flex;justify-content:space-between;font-size:13px;margin-top:14px}
+.callout{border-left:5px solid var(--rust);padding:18px 20px;background:#fff8f2;border-radius:0 12px 12px 0;font-family:Georgia,serif;font-size:22px;line-height:1.3}
+.small{font-size:12px;color:var(--muted)}
+.policy{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
+.policy-year{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--blue)}
+.tag{display:inline-block;padding:5px 8px;border-radius:6px;background:#eaf1f5;color:var(--blue);font-size:11px;font-weight:800;margin:3px}
+.source{font-size:12px;color:#66727e;margin-top:10px}
+footer{background:#0e2238;color:#d8e3eb;padding:34px 0}
+footer p{margin:4px 0;font-size:12px}
+@media(max-width:900px){.kpis,.four{grid-template-columns:repeat(2,1fr)}.twocol,.three{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{padding:0 18px}.hero-inner{padding:54px 18px 42px}.section{padding:46px 0}.kpis,.four{grid-template-columns:1fr 1fr}h2{font-size:32px}.kpi .num{font-size:34px}}
+</style>
+
+<style>
+/* ===== Interactive layer ===== */
+:root{
+  --accent: var(--blue);
+  --shadow2: 0 18px 50px rgba(16,36,62,.10);
+}
+body{transition:background .35s ease,color .35s ease}
+body.dark{
+  --paper:#0b1420;--card:#101d2b;--ink:#e8eef4;--muted:#aab8c5;--line:#263746;
+  --soft:#162938;--blue:#62a7d8;--blue2:#82badc;--rust:#e07b51;--green:#78aa7f;--gold:#d8b56d;
+}
+body.dark .section.alt{background:#0d1a27}
+body.dark .bar{background:#243544}
+body.dark .callout{background:#1d1714}
+body.dark footer{background:#070e17}
+body.dark .node{background:#162938;border-color:#304a5c}
+body.dark .small,.dark .source{color:#91a3b2}
+
+.progress-wrap{position:fixed;top:0;left:0;right:0;height:4px;z-index:1000;background:rgba(255,255,255,.12)}
+.progress{height:100%;width:0;background:linear-gradient(90deg,var(--rust),var(--gold),var(--green));transform-origin:left}
+
+.topbar{
+ position:fixed;top:4px;left:0;right:0;z-index:999;
+ display:flex;align-items:center;justify-content:space-between;gap:12px;
+ padding:9px 16px;background:rgba(13,41,72,.84);backdrop-filter:blur(14px);
+ color:#fff;border-bottom:1px solid rgba(255,255,255,.12);transform:translateY(-120%);
+ transition:transform .3s ease;
+}
+.topbar.visible{transform:translateY(0)}
+.topbar .brand{font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.navlinks{display:flex;gap:6px;overflow:auto;white-space:nowrap}
+.navlinks button,.toolbtn{
+ border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;
+ border-radius:999px;padding:7px 11px;font-size:11px;font-weight:750;cursor:pointer;
+ transition:.2s ease;
+}
+.navlinks button:hover,.toolbtn:hover{background:rgba(255,255,255,.18);transform:translateY(-1px)}
+.tools{display:flex;gap:7px}
+
+.hero{min-height:72vh;display:flex;align-items:center}
+.hero-inner{animation:heroIn .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero:before{
+ content:"";position:absolute;inset:0;
+ background:radial-gradient(circle at 78% 28%,rgba(255,255,255,.12),transparent 24%),
+            linear-gradient(110deg,transparent 35%,rgba(255,255,255,.035) 35.2%,transparent 35.5%);
+ pointer-events:none;
+}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow2);border-color:#b9c8d3}
+.kpi .num[data-count]{font-variant-numeric:tabular-nums}
+.fill{width:0!important;transition:width 1.25s cubic-bezier(.2,.8,.2,1)}
+.in .fill,.card.in .fill{width:var(--bar-width)!important}
+
+.data-explorer{margin-top:28px}
+.explorer-controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.explorer-controls button{
+ border:1px solid var(--line);background:var(--card);color:var(--ink);
+ padding:9px 13px;border-radius:999px;cursor:pointer;font-weight:750;font-size:12px;
+}
+.explorer-controls button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.explorer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.explorer-chart{min-height:300px}
+.svg-chart{width:100%;height:320px;overflow:visible}
+.svg-chart .line{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.svg-chart .area{fill:rgba(28,93,145,.12)}
+.svg-chart .point{fill:var(--card);stroke:var(--blue);stroke-width:3;cursor:pointer;transition:r .2s ease}
+.svg-chart .point:hover{r:8}
+.svg-chart text{fill:var(--muted);font-size:11px}
+.insight-panel{display:flex;flex-direction:column;justify-content:center}
+.insight-big{font:700 42px Georgia,serif;color:var(--blue);line-height:1}
+.insight-title{font:800 14px system-ui;margin-top:8px}
+.insight-copy{color:var(--muted);font-size:13px;margin-top:8px}
+
+.compare{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px
+}
+.compare-item{padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.compare-value{font:700 30px Georgia,serif;color:var(--blue)}
+.compare-label{font-size:12px;color:var(--muted);margin-top:3px}
+
+.route .node{cursor:pointer;transition:.2s ease}
+.route .node:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(16,36,62,.10)}
+.route .node.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+.tooltip{
+ position:fixed;z-index:1200;max-width:280px;padding:11px 13px;border-radius:10px;
+ background:#10243e;color:#fff;font-size:12px;line-height:1.4;box-shadow:0 12px 35px rgba(0,0,0,.25);
+ opacity:0;pointer-events:none;transform:translateY(5px);transition:.15s ease;
+}
+.tooltip.show{opacity:1;transform:none}
+
+.timeline .titem{opacity:.45;transition:opacity .35s ease,transform .35s ease}
+.timeline .titem.active{opacity:1;transform:translateX(5px)}
+.timeline .titem .dot{transition:transform .3s ease}
+.timeline .titem.active .dot{transform:scale(1.22)}
+
+.backtop{
+ position:fixed;right:18px;bottom:18px;z-index:990;width:42px;height:42px;border-radius:50%;
+ border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+ box-shadow:0 8px 24px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:.25s ease;
+}
+.backtop.show{opacity:1;pointer-events:auto}
+
+.print-btn{background:#fff!important;color:#10243e!important}
+body.dark .print-btn{background:#fff!important;color:#10243e!important}
+
+@media(max-width:850px){
+ .topbar .brand{display:none}.explorer-grid{grid-template-columns:1fr}.compare{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+ .reveal{opacity:1!important;transform:none!important}.fill{width:var(--bar-width)!important}
+}
+@media print{
+ .topbar,.progress-wrap,.backtop,.data-explorer{display:none!important}
+ .reveal{opacity:1!important;transform:none!important}
+ .card{break-inside:avoid}
+ body{background:#fff!important;color:#000!important}
+}
+</style>
+
+
+<style>
+/* ===== Editorial imagery ===== */
+.hero-visual{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:14px;
+  max-width:1050px;
+}
+.hero-photo,.photo-card{
+  position:relative;overflow:hidden;border-radius:18px;border:1px solid rgba(255,255,255,.18);
+  min-height:230px;background:#173b5b;
+}
+.hero-photo img,.photo-card img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.82) contrast(1.03);
+  transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .4s ease;
+}
+.hero-photo:hover img,.photo-card:hover img{transform:scale(1.045);filter:saturate(1) contrast(1.05)}
+.hero-photo:after,.photo-card:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 48%,rgba(4,18,31,.78) 100%);
+  pointer-events:none;
+}
+.photo-caption{
+  position:absolute;left:16px;right:16px;bottom:13px;z-index:2;color:#fff;
+  font-size:11px;line-height:1.35
+}
+.photo-caption strong{display:block;font-size:13px;margin-bottom:2px}
+.gallery{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px
+}
+.photo-card{min-height:180px;border-color:var(--line);background:var(--soft)}
+.photo-card .photo-caption{color:#fff}
+.photo-credit{font-size:10px;color:var(--muted);margin-top:6px}
+@media(max-width:800px){.hero-visual{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}.hero-photo,.photo-card{min-height:210px}}
+</style>
+
+
+<style>
+.route-donut-wrap{display:grid;grid-template-columns:minmax(260px,1fr) minmax(190px,.7fr);gap:10px;align-items:center;margin-top:14px}
+.route-donut{width:100%;max-width:360px;margin:auto}
+.donut-seg{transition:stroke-width .25s ease,filter .25s ease,opacity .25s ease}
+.route-legend{display:grid;gap:8px}
+.route-legend-item{
+ display:grid;grid-template-columns:15px 1fr auto;align-items:center;gap:8px;
+ border:1px solid var(--line);background:var(--card);color:var(--ink);
+ border-radius:10px;padding:10px 11px;text-align:left;cursor:pointer
+}
+.route-legend-item.active{box-shadow:0 0 0 2px var(--blue);transform:translateY(-1px)}
+.route-legend-item strong{font-size:16px}
+.swatch{width:11px;height:11px;border-radius:50%}.swatch.bof{background:#1c5d91}.swatch.if{background:#4f7657}.swatch.eaf{background:#b55c37}
+.route-stat{font:700 52px Georgia,serif;color:var(--blue);line-height:1;margin:12px 0}
+.route-shift-grid{margin-top:12px}
+@media(max-width:800px){.route-donut-wrap{grid-template-columns:1fr}}
+</style>
+
+
+<style>
+/* ===== Final Indian tricolour editorial theme ===== */
+:root{
+  --saffron:#ff9933;
+  --green:#138808;
+  --navy:#17324d;
+  --ink:#18252f;
+  --muted:#64717a;
+  --paper:#fbfaf7;
+  --card:#ffffff;
+  --line:#e4e0d7;
+  --soft:#f4f0e8;
+  --blue:#1c5d91;
+  --blue2:#3b789e;
+  --rust:#b85e38;
+  --gold:#c59a4a;
+}
+body{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(255,153,51,.08),transparent 20%),
+    radial-gradient(circle at 88% 72%,rgba(19,136,8,.07),transparent 22%),
+    var(--paper);
+  color:var(--ink);
+}
+body:before{
+  content:"";position:fixed;top:0;left:0;right:0;height:4px;z-index:2000;
+  background:linear-gradient(90deg,var(--saffron) 0%,var(--saffron) 33.33%,#fff 33.33%,#fff 66.66%,var(--green) 66.66%,var(--green) 100%);
+  pointer-events:none;
+}
+.hero{
+  background:
+    linear-gradient(115deg,rgba(255,153,51,.94) 0%,rgba(255,255,255,.96) 46%,rgba(19,136,8,.88) 100%);
+  color:var(--navy);
+  position:relative;overflow:hidden;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:6px;
+  background:linear-gradient(90deg,var(--saffron),#fff,var(--green));
+}
+.hero h1,.hero .kicker,.hero .dek,.hero .hero-meta{color:var(--navy)}
+.hero h1{text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.topbar{background:rgba(23,50,77,.92)}
+.progress{background:linear-gradient(90deg,var(--saffron),#ffffff,var(--green));box-shadow:0 0 10px rgba(255,153,51,.25)}
+.section.alt{background:
+  linear-gradient(135deg,rgba(255,153,51,.055),transparent 38%),
+  linear-gradient(315deg,rgba(19,136,8,.055),transparent 38%),
+  var(--soft);
+}
+.section h2{color:var(--navy)}
+.card{background:rgba(255,255,255,.94)}
+.card:hover{border-color:rgba(19,136,8,.35)}
+.eyebrow{color:var(--green)}
+.kpi .num{color:var(--navy)}
+.route-stat,.insight-big,.compare-value{color:var(--blue)}
+.chart-title{color:var(--navy)}
+.fill{background:linear-gradient(90deg,var(--saffron),#e7b46d)}
+.fill.green{background:linear-gradient(90deg,#6aa25c,var(--green))}
+.fill.rust{background:linear-gradient(90deg,#dc8a62,var(--rust))}
+.route-legend-item.active{box-shadow:0 0 0 2px var(--saffron)}
+.node.active{background:linear-gradient(135deg,var(--saffron),var(--green));border-color:transparent}
+.inline-visual{width:100%;height:100%;display:block;min-height:210px}
+.hero-photo,.photo-card{background:linear-gradient(135deg,rgba(255,153,51,.22),rgba(19,136,8,.18))}
+.photo-card{border-color:rgba(19,136,8,.16)}
+.photo-caption{background:linear-gradient(180deg,transparent,rgba(23,50,77,.86))}
+.callout{border-left-color:var(--saffron);background:linear-gradient(110deg,rgba(255,153,51,.08),rgba(19,136,8,.05))}
+a{color:var(--blue)}
+footer{border-top:4px solid transparent;border-image:linear-gradient(90deg,var(--saffron),#fff,var(--green)) 1}
+body.dark{
+  --paper:#0e1718;--card:#13201e;--soft:#15211f;--ink:#e8eee9;--muted:#a9b6ae;--line:#2a3a34;
+  --navy:#e8eee9;--blue:#7db7da;
+  background:radial-gradient(circle at 10% 10%,rgba(255,153,51,.08),transparent 22%),radial-gradient(circle at 90% 80%,rgba(19,136,8,.08),transparent 22%),var(--paper);
+}
+body.dark .hero{color:#17324d}
+body.dark .hero h1,.dark .hero .kicker,.dark .hero .dek,.dark .hero .hero-meta{color:#17324d}
+body.dark .card{background:rgba(19,32,30,.95)}
+</style>
+
+
+<style id="final-polish">
+/* =========================================================
+   FINAL POLISH — high-contrast editorial Indian steel theme
+   ========================================================= */
+:root{
+  --saffron:#E8752A;
+  --saffron-soft:#FFF1E7;
+  --green:#23843A;
+  --green-soft:#EDF7EF;
+  --navy:#17324D;
+  --ink:#24323B;
+  --muted:#5C6972;
+  --paper:#FBFAF7;
+  --card:#FFFFFF;
+  --soft:#F3F1EB;
+  --line:#DCD8CF;
+  --blue:#245E89;
+  --blue-soft:#EDF4F8;
+  --rust:#B65B36;
+  --gold:#A98235;
+}
+
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 4% 4%,rgba(232,117,42,.055),transparent 18%),
+    radial-gradient(circle at 96% 88%,rgba(35,132,58,.055),transparent 20%),
+    var(--paper);
+  color:var(--ink);
+  font-family:"Aptos","Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.58;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+body:after{
+  content:"";
+  position:fixed;left:0;right:0;bottom:0;height:3px;z-index:2000;
+  background:linear-gradient(90deg,var(--saffron),#F6F2EA 50%,var(--green));
+  pointer-events:none;
+}
+
+h1,h2,h3,h4{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--navy);
+  text-wrap:balance;
+}
+h1{
+  font-size:clamp(44px,6vw,76px);
+  line-height:.98;
+  letter-spacing:-.035em;
+  margin:10px 0 20px;
+}
+h2{
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.06;
+  letter-spacing:-.025em;
+  margin:8px 0 14px;
+}
+h3{
+  font-size:clamp(21px,2.5vw,28px);
+  line-height:1.12;
+  margin:5px 0 9px;
+}
+p{color:var(--ink)}
+.section p,.card p{color:var(--ink)}
+.lead{color:var(--muted)!important;max-width:850px;font-size:17px}
+.small{color:var(--muted)!important}
+.source{color:#647078!important}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}
+
+.section{
+  position:relative;
+  padding:62px 0;
+  background:var(--paper);
+}
+.section.alt{
+  background:
+    linear-gradient(135deg,rgba(232,117,42,.045),transparent 34%),
+    linear-gradient(315deg,rgba(35,132,58,.045),transparent 34%),
+    var(--soft);
+}
+.section.alt .card{background:rgba(255,255,255,.94)}
+
+.card{
+  color:var(--ink)!important;
+  background:var(--card)!important;
+  border:1px solid var(--line);
+  box-shadow:0 9px 28px rgba(23,50,77,.055);
+}
+.card *{color:inherit}
+.card .small,.card .source,.card .legend{color:var(--muted)!important}
+.chart-title{
+  color:var(--navy)!important;
+  font-weight:800;
+  letter-spacing:-.01em;
+}
+.metric span{color:var(--muted)!important}
+.metric b{color:var(--navy)!important}
+.year{color:var(--blue)!important}
+.titem p{color:var(--muted)!important}
+.titem h3{color:var(--navy)!important}
+.eyebrow{
+  color:var(--green)!important;
+  font-weight:850;
+  letter-spacing:.12em;
+}
+.kpi .num{color:var(--navy)!important}
+.kpi .sub{color:var(--muted)!important}
+.callout{
+  color:var(--navy)!important;
+  background:
+    linear-gradient(110deg,rgba(232,117,42,.08),rgba(35,132,58,.045)),
+    #FFFDF9;
+  border-left-color:var(--saffron);
+}
+.node{
+  color:var(--navy)!important;
+  background:#F7F8F7!important;
+  border-color:#D7DDD9!important;
+}
+.arrow{color:var(--rust)!important}
+.bar{background:#E2E0DA!important}
+.fill{background:linear-gradient(90deg,var(--saffron),#E6B36F)!important}
+.fill.green{background:linear-gradient(90deg,#68A66E,var(--green))!important}
+.fill.rust{background:linear-gradient(90deg,#D88762,var(--rust))!important}
+
+.explorer-controls button{
+  color:var(--navy)!important;
+  background:#fff!important;
+  border-color:var(--line)!important;
+}
+.explorer-controls button:hover{
+  border-color:var(--saffron)!important;
+  transform:translateY(-1px);
+}
+.explorer-controls button.active{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+
+.route-legend-item{
+  color:var(--navy)!important;
+  background:#fff!important;
+}
+.route-legend-item b{color:var(--navy)!important}
+.route-legend-item strong{color:var(--blue)!important}
+.route-legend-item.active{
+  box-shadow:0 0 0 2px var(--saffron)!important;
+}
+.route-insight h3{color:var(--navy)!important}
+.route-stat,.insight-big,.compare-value{color:var(--blue)!important}
+
+.photo-caption{
+  color:#fff!important;
+}
+.photo-credit{color:var(--muted)!important}
+
+.hero{
+  background:
+    linear-gradient(120deg,
+      rgba(232,117,42,.96) 0%,
+      rgba(255,249,240,.98) 46%,
+      rgba(35,132,58,.92) 100%);
+  color:var(--navy)!important;
+  overflow:hidden;
+  position:relative;
+  border-bottom:1px solid rgba(23,50,77,.10);
+}
+.hero:before{
+  background:
+    radial-gradient(circle at 78% 25%,rgba(255,255,255,.55),transparent 23%),
+    linear-gradient(110deg,transparent 36%,rgba(23,50,77,.035) 36.2%,transparent 36.5%)!important;
+}
+.hero h1,
+.hero .kicker,
+.hero .dek,
+.hero .hero-meta,
+.hero p{
+  color:var(--navy)!important;
+}
+.hero .dek,.hero p{
+  max-width:860px;
+}
+.hero .pill{
+  color:var(--navy)!important;
+  background:rgba(255,255,255,.55)!important;
+  border-color:rgba(23,50,77,.15)!important;
+}
+.hero .small{color:rgba(23,50,77,.72)!important}
+.hero h1{text-shadow:none!important}
+
+.topbar{
+  background:rgba(23,50,77,.95)!important;
+}
+.topbar .brand{color:#fff!important}
+.navlinks button,.toolbtn{
+  color:#fff!important;
+}
+.print-btn{
+  color:var(--navy)!important;
+  background:#fff!important;
+}
+
+.progress{
+  background:linear-gradient(90deg,var(--saffron),#F7F2E9 50%,var(--green))!important;
+}
+
+.inline-visual{
+  border-radius:12px;
+}
+.hero-photo,.photo-card{
+  border-color:rgba(23,50,77,.12);
+  box-shadow:0 10px 30px rgba(23,50,77,.08);
+}
+
+footer{
+  background:var(--navy)!important;
+  color:#DCE6EC!important;
+  border-top:4px solid transparent;
+  border-image:linear-gradient(90deg,var(--saffron),#F5F0E7,var(--green)) 1;
+}
+footer *{color:inherit}
+footer .small{color:#B9C8D2!important}
+
+@media(max-width:700px){
+  body{font-size:15px}
+  .section{padding:46px 0}
+  .card{padding:19px}
+  h1{font-size:clamp(39px,12vw,58px)}
+  h2{font-size:clamp(29px,9vw,42px)}
+}
+
+/* Accessibility */
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid rgba(232,117,42,.6);
+  outline-offset:3px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="progress-wrap"><div class="progress" id="progress"></div></div>
+<div class="topbar" id="topbar">
+  <div class="brand">India Steel Journey</div>
+  <div class="navlinks" aria-label="Section navigation">
+    <button data-target="headline">Scale</button>
+    <button data-target="transformation">Journey</button>
+    <button data-target="recent">Data</button>
+    <button data-target="ecosystem">Ecosystem</button>
+    <button data-target="route-share">Routes</button>
+    <button data-target="technology">Technology</button>
+    <button data-target="policy">Policy</button>
+    <button data-target="ambition">2030</button>
+  </div>
+  <div class="tools">
+    <button class="toolbtn" id="themeBtn" title="Toggle dark mode">◐</button>
+    <button class="toolbtn print-btn" id="printBtn" title="Print or save as PDF">Print</button>
+  </div>
+</div>
+<div class="tooltip" id="tooltip"></div>
+<button class="backtop" id="backtop" aria-label="Back to top">↑</button>
+
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="kicker">INDIA · METALS &amp; STEEL · 1947—2026</div><div class="small" style="margin-top:8px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">Interactive · self-contained · no external assets</div>
+    <h1>From a ~1 MT steel base to a global steel major</h1>
+    <p>India's steel journey since Independence is a story of institution building, public-sector capacity creation, liberalisation, private investment, technology adoption and scale.</p>
+    
+    <div style="margin-top:30px;display:flex;gap:10px;flex-wrap:wrap">
+      <button class="toolbtn" style="padding:10px 15px" onclick="document.getElementById('headline').scrollIntoView({behavior:'smooth'})">Explore the data ↓</button>
+      <button class="toolbtn" style="padding:10px 15px" onclick="document.getElementById('transformation').scrollIntoView({behavior:'smooth'})">Walk the timeline →</button>
+    </div>
+
+
+    <div class="hero-visual">
+      <figure class="hero-photo" style="margin:0">
+        <svg class="inline-visual" viewBox="0 0 900 420" role="img" aria-label="Stylised Bhilai steel plant illustration">
+<defs><linearGradient id="sky" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#138808"/></linearGradient></defs>
+<rect width="900" height="420" fill="url(#sky)" opacity=".28"/>
+<rect y="290" width="900" height="130" fill="#263238"/>
+<rect x="90" y="205" width="180" height="85" fill="#66747c"/><rect x="125" y="165" width="25" height="125" fill="#53616a"/>
+<rect x="175" y="145" width="32" height="145" fill="#45545d"/><rect x="230" y="180" width="22" height="110" fill="#45545d"/>
+<path d="M310 290V120h38v170M348 150h140v140M488 180h80v110" fill="none" stroke="#52616b" stroke-width="20"/>
+<path d="M370 110 C350 75 400 55 375 25 M410 110 C390 75 440 55 415 25 M450 110 C430 75 480 55 455 25" fill="none" stroke="#7d8a91" stroke-width="10" opacity=".8"/>
+<rect x="560" y="230" width="220" height="60" fill="#45545d"/><rect x="610" y="200" width="18" height="90" fill="#37474f"/>
+<path d="M20 320H880" stroke="#ff9933" stroke-width="5"/><path d="M20 335H880" stroke="#138808" stroke-width="5"/>
+<text x="45" y="65" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#17324d">Integrated Steelmaking</text>
+</svg>
+        <figcaption class="photo-caption">
+          <strong>From national capacity to modern scale</strong>
+          Bhilai Steel Plant, 2018 · Government of India / PIB
+        </figcaption>
+      </figure>
+      <figure class="hero-photo" style="margin:0">
+        <svg class="inline-visual" viewBox="0 0 900 420" role="img" aria-label="Stylised iron ore mining illustration">
+<defs><linearGradient id="mine" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#138808"/></linearGradient></defs>
+<rect width="900" height="420" fill="url(#mine)" opacity=".22"/>
+<path d="M0 300L120 210 230 255 360 145 500 235 630 155 770 245 900 185V420H0Z" fill="#596a72"/>
+<path d="M0 325L140 255 280 300 420 215 560 285 700 220 900 285V420H0Z" fill="#3f4f56"/>
+<path d="M100 330H760" stroke="#d8b08b" stroke-width="9" stroke-dasharray="28 18"/>
+<rect x="540" y="260" width="120" height="45" rx="7" fill="#ff9933"/><rect x="575" y="235" width="55" height="30" fill="#ff9933"/>
+<circle cx="565" cy="312" r="16" fill="#263238"/><circle cx="640" cy="312" r="16" fill="#263238"/>
+<path d="M610 235L675 175" stroke="#263238" stroke-width="14"/><path d="M675 175L735 175" stroke="#263238" stroke-width="14"/>
+<text x="45" y="65" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#17324d">Mine → Metal</text>
+<text x="45" y="100" font-family="system-ui" font-size="16" fill="#34495e">Resource security is the foundation.</text>
+</svg>
+        <figcaption class="photo-caption">
+          <strong>Mine-to-metal foundation</strong>
+          Iron ore mining in India
+        </figcaption>
+      </figure>
+    </div>
+
+<div class="hero-meta">
+      <span class="pill">1947 → 2026</span>
+      <span class="pill">Crude steel · capacity · consumption</span>
+      <span class="pill">Policy · technology · R&amp;D · raw materials</span>
+      <span class="pill">Source-led · Ministry of Steel</span>
+    </div>
+  </div>
+</header>
+
+<section class="section reveal" id="headline">
+<div class="wrap">
+  <div class="eyebrow">01 · The headline</div>
+  <h2>The scale of transformation</h2>
+  <p class="lead">The Ministry of Steel's 2025–26 Annual Report states that India had about 1 million tonnes of steel capacity at Independence, entirely in the private sector. India is now the world's second-largest crude-steel producer and the world's largest producer of sponge iron.</p>
+  <div class="grid kpis">
+    <div class="card kpi"><div class="num">~1 MT</div><div class="label">Steel capacity in 1947</div><div class="sub">Three principal steel plants plus a few EAF units.</div></div>
+    <div class="card kpi"><div class="num">164.887 MT</div><div class="label">Crude steel, CY 2025</div><div class="sub">World Steel Association provisional data cited by the Ministry.</div></div>
+    <div class="card kpi"><div class="num">218.296 MT</div><div class="label">Capacity, Apr–Dec 2025–26</div><div class="sub">JPC provisional data in the report.</div></div>
+    <div class="card kpi"><div class="num">#2</div><div class="label">Global crude-steel rank</div><div class="sub">India ranked second in calendar 2025.</div></div>
+  </div>
+  <div class="card chart-card">
+    <div class="chart-head">
+      <div><div class="chart-title">Crude steel production — selected anchors</div><div class="small">The report gives the historical 1947 anchor and a detailed recent series.</div></div>
+      <div class="legend">Million tonnes · 2021–22 to 2024–25 are FY figures; 2025 is calendar year.</div>
+    </div>
+    <svg viewBox="0 0 1100 430" role="img" aria-label="Crude steel production chart">
+      <g stroke="#ddd8cf" stroke-width="1">
+        <line x1="80" y1="60" x2="1040" y2="60"/><line x1="80" y1="130" x2="1040" y2="130"/>
+        <line x1="80" y1="200" x2="1040" y2="200"/><line x1="80" y1="270" x2="1040" y2="270"/>
+        <line x1="80" y1="340" x2="1040" y2="340"/>
+      </g>
+      <g fill="#6a7580" font-size="12"><text x="38" y="344">0</text><text x="30" y="274">50</text><text x="25" y="204">100</text><text x="25" y="134">150</text><text x="25" y="64">200</text></g>
+      <polyline fill="none" stroke="#1c5d91" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"
+        points="105,336 720,171 800,141 880,124 960,127 1040,109"/>
+      <circle cx="105" cy="336" r="8" fill="#b55c37"/><circle cx="720" cy="171" r="8" fill="#1c5d91"/>
+      <circle cx="800" cy="141" r="8" fill="#1c5d91"/><circle cx="880" cy="124" r="8" fill="#1c5d91"/>
+      <circle cx="960" cy="127" r="8" fill="#1c5d91"/><circle cx="1040" cy="109" r="9" fill="#4f7657"/>
+      <g font-size="12" font-weight="800" fill="#10243e">
+        <text x="85" y="370">1947</text><text x="705" y="370">2021–22</text><text x="785" y="370">2022–23</text>
+        <text x="865" y="370">2023–24</text><text x="945" y="370">2024–25</text><text x="1015" y="370">2025</text>
+      </g>
+      <g font-size="14" font-weight="800">
+        <text x="92" y="320" fill="#b55c37">~1 MT</text>
+        <text x="700" y="153" fill="#1c5d91">120.293</text>
+        <text x="784" y="123" fill="#1c5d91">127.197</text>
+        <text x="865" y="106" fill="#1c5d91">144.299</text>
+        <text x="945" y="109" fill="#1c5d91">152.180</text>
+        <text x="1000" y="91" fill="#4f7657">164.887</text>
+      </g>
+      <text x="80" y="28" font-size="12" fill="#6a7580">Million tonnes</text>
+    </svg>
+    <div class="source">Source: Ministry of Steel Annual Report 2025–26, pp. 13, 16 and 19. The 1947 point is capacity, not production; recent points are crude-steel production.</div>
+  </div>
+  <div class="card data-explorer reveal">
+    <div class="eyebrow">Interactive data explorer</div>
+    <div class="chart-title">Change the lens — production, consumption, capacity or trade</div>
+    <div class="explorer-controls" role="tablist" aria-label="Data series">
+      <button class="active" data-series="production">Production</button>
+      <button data-series="consumption">Consumption</button>
+      <button data-series="capacity">Capacity</button>
+      <button data-series="trade">Imports vs exports</button>
+    </div>
+    <div class="explorer-grid">
+      <div class="explorer-chart">
+        <svg class="svg-chart" id="dataChart" viewBox="0 0 760 320" aria-label="Interactive steel data chart"></svg>
+      </div>
+      <div class="card insight-panel" id="insightPanel">
+        <div class="small">Selected year</div>
+        <div class="insight-big" id="insightValue">2024–25</div>
+        <div class="insight-title" id="insightTitle">Production</div>
+        <div class="insight-copy" id="insightCopy">Click a point to inspect the reported value and its context.</div>
+        <div class="compare">
+          <div class="compare-item"><div class="small">Start</div><div class="compare-value" id="startValue">120.293</div><div class="compare-label" id="startLabel">MT</div></div>
+          <div class="compare-item"><div class="small">Latest comparable</div><div class="compare-value" id="latestValue">152.180</div><div class="compare-label" id="latestLabel">MT</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="small" style="margin-top:10px">Tip: hover over a point for the exact reported value; click it to lock the insight panel.</div>
+  </div>
+
+</div>
+</section>
+
+<section class="section alt reveal" id="transformation">
+<div class="wrap">
+  <div class="eyebrow">02 · The transformation</div>
+  <h2>Six structural chapters of India's steel story</h2>
+  <p class="lead">The report itself frames the journey around state-led capacity creation, liberalisation and deregulation, private-sector expansion, global competitiveness and the move toward technology and sustainability.</p>
+  <div class="timeline">
+    <div class="titem" data-tip="1947: about 1 MT capacity; industry entirely private."><span class="dot"></span><div class="year">1947</div><h3>Start with a viable but small base</h3><p>Three principal steel plants — Tata Iron &amp; Steel Company, Indian Iron &amp; Steel Company and Visvesvaraya Iron &amp; Steel Ltd. — plus a few EAF plants. Capacity was about 1 MT and the industry was entirely private.</p></div>
+    <div class="titem" data-tip="Mid-1950s to early 1970s: large integrated public-sector plants were created."><span class="dot"></span><div class="year">MID-1950s → EARLY 1970s</div><h3>Build national industrial capacity</h3><p>Large integrated public-sector plants were established at Bhilai, Durgapur, Rourkela and Bokaro. The report notes that crude-steel production grew to nearly 15 MT from the 1 MT 1947 base, making India the 10th-largest steel producer at that stage.</p></div>
+    <div class="titem" data-tip="1991–92: liberalisation removed major controls and expanded private participation."><span class="dot"></span><div class="year">1991–92</div><h3>Liberalise and open the sector</h3><p>Large-scale capacity was removed from the public-sector reservation; licensing was withdrawn subject to locational restrictions; pricing and distribution controls ended; private-sector participation increased; foreign investment and global technology access expanded.</p></div>
+    <div class="titem" data-tip="2005: National Steel Policy created a competitiveness blueprint."><span class="dot"></span><div class="year">2005</div><h3>Set a competitiveness blueprint</h3><p>National Steel Policy 2005 was introduced as a blueprint for a self-reliant and globally competitive sector, with emphasis on world-standard efficiency, productivity and diversified steel demand.</p></div>
+    <div class="titem" data-tip="2017: technology, raw materials, R&D and competitiveness moved to the centre."><span class="dot"></span><div class="year">2017</div><h3>Move toward technology-led competitiveness</h3><p>National Steel Policy 2017 set a roadmap toward a technologically advanced and globally competitive industry, with focus on raw-material security, R&amp;D, import dependency, productivity, quality and investment.</p></div>
+    <div class="titem" data-tip="2021–26: specialty steel, digitisation, R&D, logistics and resilience."><span class="dot"></span><div class="year">2021 → 2026</div><h3>Scale, specialise and modernise</h3><p>PLI for Specialty Steel, digitisation of mines, PM GatiShakti, R&amp;D, recycling, safety and technology initiatives are layered onto a rapidly expanding production and capacity base.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal" id="recent">
+<div class="wrap">
+  <div class="eyebrow">03 · Recent scale</div>
+  <h2>Recent expansion</h2>
+  <div class="grid twocol">
+    <div class="card">
+      <div class="chart-title">Crude steel: production &amp; capacity</div>
+      <div class="metric"><span>2021–22 · Capacity</span><strong>154.062 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:70.6%"></div></div>
+      <div class="metric"><span>2024–25 · Capacity</span><strong>200.333 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:91.8%"></div></div>
+      <div class="metric"><span>Apr–Dec 2025–26 · Capacity*</span><strong>218.296 MT</strong></div><div class="bar"><div class="fill green" style="--bar-width:100%"></div></div>
+      <div class="small" style="margin-top:14px">*Provisional. The report states that production growth from 120.293 MT to 152.180 MT in 2021–22 to 2024–25 was driven by capacity expansion from 154.062 MT to 200.333 MT.</div>
+    </div>
+    <div class="card">
+      <div class="chart-title">Finished steel: domestic demand</div>
+      <div class="metric"><span>2020–21 consumption</span><strong>94.89 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:62.4%"></div></div>
+      <div class="metric"><span>2021–22</span><strong>105.75 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:69.5%"></div></div>
+      <div class="metric"><span>2022–23</span><strong>119.89 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:78.8%"></div></div>
+      <div class="metric"><span>2023–24</span><strong>136.29 MT</strong></div><div class="bar"><div class="fill" style="--bar-width:89.6%"></div></div>
+      <div class="metric"><span>2024–25</span><strong>152.13 MT</strong></div><div class="bar"><div class="fill green" style="--bar-width:100%"></div></div>
+      <div class="small" style="margin-top:14px">Per-capita finished-steel consumption reached 108.0 kg in 2024–25, up from 97.7 kg in 2023–24.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section alt reveal" id="ecosystem">
+<div class="wrap">
+  <div class="eyebrow">04 · The industry changed shape</div>
+  <h2>From a public-sector core to a broad private-sector ecosystem</h2>
+  <div class="grid twocol">
+    <div class="card">
+      <div class="chart-title">Crude steel production by sector · 2024–25</div>
+      <div class="metric"><span>Private sector</span><strong>127.953 MT · 84%</strong></div>
+      <div class="bar"><div class="fill" style="--bar-width:84.1%"></div></div>
+      <div class="metric"><span>Public sector</span><strong>24.227 MT · 16%</strong></div>
+      <div class="bar"><div class="fill rust" style="--bar-width:15.9%"></div></div>
+      <p class="small">The report's table shows the private-sector share rising from 81% in 2021–22 to 84% in 2024–25, while the public-sector share moved from 19% to 16%.</p>
+    </div>
+    <div class="card">
+      <div class="chart-title">What liberalisation unlocked</div>
+      <div class="route"><span class="node">Private investment</span><span class="arrow">→</span><span class="node">State-of-the-art capacity</span><span class="arrow">→</span><span class="node">Global technology</span><span class="arrow">→</span><span class="node">Competition</span></div>
+
+<div class="gallery reveal">
+  <figure class="photo-card" style="margin:0">
+    <svg class="inline-visual" viewBox="0 0 900 420" role="img" aria-label="Stylised iron ore mining illustration">
+<defs><linearGradient id="mine" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#138808"/></linearGradient></defs>
+<rect width="900" height="420" fill="url(#mine)" opacity=".22"/>
+<path d="M0 300L120 210 230 255 360 145 500 235 630 155 770 245 900 185V420H0Z" fill="#596a72"/>
+<path d="M0 325L140 255 280 300 420 215 560 285 700 220 900 285V420H0Z" fill="#3f4f56"/>
+<path d="M100 330H760" stroke="#d8b08b" stroke-width="9" stroke-dasharray="28 18"/>
+<rect x="540" y="260" width="120" height="45" rx="7" fill="#ff9933"/><rect x="575" y="235" width="55" height="30" fill="#ff9933"/>
+<circle cx="565" cy="312" r="16" fill="#263238"/><circle cx="640" cy="312" r="16" fill="#263238"/>
+<path d="M610 235L675 175" stroke="#263238" stroke-width="14"/><path d="M675 175L735 175" stroke="#263238" stroke-width="14"/>
+<text x="45" y="65" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#17324d">Mine → Metal</text>
+<text x="45" y="100" font-family="system-ui" font-size="16" fill="#34495e">Resource security is the foundation.</text>
+</svg>
+    <figcaption class="photo-caption"><strong>Mining</strong>Raw-material foundation</figcaption>
+  </figure>
+  <figure class="photo-card" style="margin:0">
+    <svg class="inline-visual" viewBox="0 0 900 420" role="img" aria-label="Stylised Bhilai steel plant illustration">
+<defs><linearGradient id="sky" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#138808"/></linearGradient></defs>
+<rect width="900" height="420" fill="url(#sky)" opacity=".28"/>
+<rect y="290" width="900" height="130" fill="#263238"/>
+<rect x="90" y="205" width="180" height="85" fill="#66747c"/><rect x="125" y="165" width="25" height="125" fill="#53616a"/>
+<rect x="175" y="145" width="32" height="145" fill="#45545d"/><rect x="230" y="180" width="22" height="110" fill="#45545d"/>
+<path d="M310 290V120h38v170M348 150h140v140M488 180h80v110" fill="none" stroke="#52616b" stroke-width="20"/>
+<path d="M370 110 C350 75 400 55 375 25 M410 110 C390 75 440 55 415 25 M450 110 C430 75 480 55 455 25" fill="none" stroke="#7d8a91" stroke-width="10" opacity=".8"/>
+<rect x="560" y="230" width="220" height="60" fill="#45545d"/><rect x="610" y="200" width="18" height="90" fill="#37474f"/>
+<path d="M20 320H880" stroke="#ff9933" stroke-width="5"/><path d="M20 335H880" stroke="#138808" stroke-width="5"/>
+<text x="45" y="65" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#17324d">Integrated Steelmaking</text>
+</svg>
+    <figcaption class="photo-caption"><strong>Integrated steelmaking</strong>Bhilai Steel Plant</figcaption>
+  </figure>
+  <figure class="photo-card" style="margin:0">
+    <svg class="inline-visual" viewBox="0 0 900 420" role="img" aria-label="Stylised iron ore mining illustration">
+<defs><linearGradient id="mine" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#138808"/></linearGradient></defs>
+<rect width="900" height="420" fill="url(#mine)" opacity=".22"/>
+<path d="M0 300L120 210 230 255 360 145 500 235 630 155 770 245 900 185V420H0Z" fill="#596a72"/>
+<path d="M0 325L140 255 280 300 420 215 560 285 700 220 900 285V420H0Z" fill="#3f4f56"/>
+<path d="M100 330H760" stroke="#d8b08b" stroke-width="9" stroke-dasharray="28 18"/>
+<rect x="540" y="260" width="120" height="45" rx="7" fill="#ff9933"/><rect x="575" y="235" width="55" height="30" fill="#ff9933"/>
+<circle cx="565" cy="312" r="16" fill="#263238"/><circle cx="640" cy="312" r="16" fill="#263238"/>
+<path d="M610 235L675 175" stroke="#263238" stroke-width="14"/><path d="M675 175L735 175" stroke="#263238" stroke-width="14"/>
+<text x="45" y="65" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#17324d">Mine → Metal</text>
+<text x="45" y="100" font-family="system-ui" font-size="16" fill="#34495e">Resource security is the foundation.</text>
+</svg>
+    <figcaption class="photo-caption"><strong>Resource base</strong>Iron ore mining</figcaption>
+  </figure>
+</div>
+<div class="photo-credit">Visuals are embedded vector illustrations created for this page; no external image or network access is required.</div>
+
+      <p>The Ministry's historical account notes that after 1991–92, Essar Steel, Ispat Industries and Jindal Group established large private-sector plants; Tata Steel also expanded. Around 9 MT of new private-sector capacity based on state-of-the-art technology emerged in the period described.</p>
+      <div class="callout">“Capital, technology, and competition” became new engines of steel-sector scale.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal" id="ecosystem2">
+<div class="wrap">
+  <div class="eyebrow">05 · From tonnes to capability</div>
+  <h2>The ecosystem is more than steelmaking</h2>
+  <p class="lead">The report's current picture spans raw materials, beneficiation, sponge iron, pig iron, steelmaking, rolling, specialty products, recycling, logistics, and downstream demand.</p>
+  <div class="card">
+    <div class="route">
+      <span class="node" data-tip="Raw material base; FY2024–25 production: 289 MT.">Iron ore</span><span class="arrow">→</span>
+      <span class="node" data-tip="Raises iron content and supports use of lower-grade resources.">Beneficiation</span><span class="arrow">→</span>
+      <span class="node" data-tip="Prepared feed materials for ironmaking.">Pellets / Sinter</span><span class="arrow">→</span>
+      <span class="node" data-tip="Key ironmaking inputs/routes highlighted in the report.">Coke / DRI</span><span class="arrow">→</span>
+      <span class="node" data-tip="Iron units feeding crude-steel production.">Hot metal / DRI</span><span class="arrow">→</span>
+      <span class="node" data-tip="Core output; 152.180 MT in FY2024–25.">Crude steel</span><span class="arrow">→</span>
+      <span class="node" data-tip="Downstream product families and specialty-steel focus.">Flat / Long / Specialty</span><span class="arrow">→</span>
+      <span class="node" data-tip="Major demand-linked sectors cited by the Ministry.">Infrastructure · Auto · Energy · Defence</span>
+    </div>
+  </div>
+  <div class="grid three" style="margin-top:18px">
+    <div class="card"><div class="eyebrow">Raw material</div><h3 style="font-family:Georgia,serif;font-size:25px">289 MT iron ore</h3><p>India's iron-ore production increased from 277 MT in FY2023–24 to 289 MT in FY2024–25.</p></div>
+    <div class="card"><div class="eyebrow">Sponge iron</div><h3 style="font-family:Georgia,serif;font-size:25px">55.764 MT</h3><p>Production in FY2024–25. India has been the world's largest sponge-iron producer every year since 2003.</p></div>
+    <div class="card"><div class="eyebrow">Domestic demand</div><h3 style="font-family:Georgia,serif;font-size:25px">152.129 MT</h3><p>Finished-steel consumption in FY2024–25, reflecting the scale of the domestic market.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section alt reveal" id="technology">
+<div class="wrap">
+  <div class="eyebrow">06 · Technology &amp; product complexity</div>
+  <h2>India is not only making more steel — it is targeting more specialised steel</h2>
+  <div class="grid twocol">
+    <div class="card">
+      <div class="chart-title">PLI for Specialty Steel</div>
+      <div class="kpi"><div class="num">₹43,874 Cr</div><div class="label">Committed investment</div></div>
+      <div class="metric"><span>Already invested</span><strong>&gt;₹22,000 Cr</strong></div>
+      <div class="metric"><span>Jobs created</span><strong>&gt;13,000</strong></div>
+      <div class="metric"><span>Projects</span><strong>44 + 42</strong></div>
+      <p class="small">The first two PLI rounds attracted 44 projects from 19 participating companies and 42 projects from 25 companies. Categories include coated/plated steel, high-strength/wear-resistant steel, specialty rails, alloy steel, wires and electrical steel.</p>
+    </div>
+    <div class="card">
+      <div class="chart-title">Research becomes an industrial capability</div>
+      <div class="metric"><span>R&amp;D projects supported since scheme inception</span><strong>75</strong></div>
+      <div class="bar"><div class="fill" style="--bar-width:100%"></div></div>
+      <div class="metric"><span>Completed</span><strong>35</strong></div>
+      <div class="bar"><div class="fill" style="--bar-width:46.7%"></div></div>
+      <div class="metric"><span>Industry-adopted technologies</span><strong>6</strong></div>
+      <div class="bar"><div class="fill green" style="--bar-width:17.1%"></div></div>
+      <p class="small">The supported R&amp;D portfolio covers low/lean-grade ore and coal beneficiation, alternative ironmaking, steel-plant waste/slag utilisation, energy/resource efficiency and low-carbon technologies.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal" id="routes">
+<div class="wrap">
+  <div class="eyebrow">07 · Technology transition</div>
+  <h2>Three routes, one evolving industry</h2>
+  <div class="grid three">
+    <div class="card"><div class="eyebrow">BOF</div><h3 style="font-family:Georgia,serif">41.1%</h3><p>Share of crude-steel production in 2024–25, down from 43.5% in 2020–21.</p></div>
+    <div class="card"><div class="eyebrow">EAF</div><h3 style="font-family:Georgia,serif">20.8%</h3><p>Share in 2024–25, compared with 28.4% in 2020–21.</p></div>
+    <div class="card"><div class="eyebrow">Induction furnace</div><h3 style="font-family:Georgia,serif">38.2%</h3><p>Share in 2024–25, compared with 28.1% in 2020–21.</p></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <div class="chart-title">Digitisation is also moving upstream</div>
+    <p>The Ministry describes digitisation as an important element for optimising mining. A roadmap has been put in place for iron-ore mining, with digitalisation being adopted across operations to improve productivity, safety, transparency and logistics performance.</p>
+    <div class="route"><span class="node">Mine planning</span><span class="arrow">→</span><span class="node">Operations data</span><span class="arrow">→</span><span class="node">Productivity</span><span class="arrow">→</span><span class="node">Safety</span><span class="arrow">→</span><span class="node">Traceability</span></div>
+  </div>
+</div>
+</section>
+<section class="section alt reveal" id="route-share">
+<div class="wrap">
+  <div class="eyebrow">07A · Value-chain mix</div>
+  <h2>How India actually makes its steel</h2>
+  <p class="lead">The Ministry of Steel reports three principal crude-steel process routes. In FY2024–25, BOF remained the largest contributor, while the induction-furnace route had also become a major part of the production mix.</p>
+
+  <div class="grid twocol" style="margin-top:24px">
+    <div class="card">
+      <div class="chart-title">Crude steel production by process route · FY2024–25</div>
+      <div class="route-donut-wrap">
+        <svg viewBox="0 0 420 420" class="route-donut" role="img" aria-label="FY2024-25 crude steel process route shares: BOF 41.1 percent, induction furnace 38.2 percent, EAF 20.8 percent">
+          <circle cx="210" cy="210" r="132" fill="none" stroke="#e2ded5" stroke-width="46"/>
+          <!-- circumference ≈ 829.4 -->
+          <circle cx="210" cy="210" r="132" fill="none" stroke="#1c5d91" stroke-width="46"
+                  stroke-dasharray="340.9 488.5" stroke-dashoffset="0" transform="rotate(-90 210 210)" class="donut-seg"/>
+          <circle cx="210" cy="210" r="132" fill="none" stroke="#4f7657" stroke-width="46"
+                  stroke-dasharray="316.9 512.5" stroke-dashoffset="-340.9" transform="rotate(-90 210 210)" class="donut-seg"/>
+          <circle cx="210" cy="210" r="132" fill="none" stroke="#b55c37" stroke-width="46"
+                  stroke-dasharray="172.6 656.8" stroke-dashoffset="-657.8" transform="rotate(-90 210 210)" class="donut-seg"/>
+          <circle cx="210" cy="210" r="92" fill="var(--card)"/>
+          <text x="210" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="34" font-weight="700" fill="var(--ink)">100%</text>
+          <text x="210" y="220" text-anchor="middle" font-size="12" fill="var(--muted)">FY2024–25 mix</text>
+        </svg>
+        <div class="route-legend">
+          <button class="route-legend-item active" data-route="BOF"><span class="swatch bof"></span><b>BOF</b><strong>41.1%</strong></button>
+          <button class="route-legend-item" data-route="IF"><span class="swatch if"></span><b>Induction Furnace</b><strong>38.2%</strong></button>
+          <button class="route-legend-item" data-route="EAF"><span class="swatch eaf"></span><b>EAF</b><strong>20.8%</strong></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-insight" id="routeInsight">
+      <div class="eyebrow">What the mix says</div>
+      <h3 id="routeInsightTitle" style="font-family:Georgia,serif;font-size:28px;margin:8px 0">BOF remains the largest route</h3>
+      <div class="route-stat" id="routeInsightStat">41.1%</div>
+      <p id="routeInsightCopy">Basic Oxygen Furnace accounted for 41.1% of crude-steel production in FY2024–25, compared with 43.5% in FY2020–21.</p>
+      <div class="metric"><span>FY2020–21</span><b id="routeOld">43.5%</b></div>
+      <div class="bar"><div class="fill" id="routeBarOld" style="--bar-width:43.5%"></div></div>
+      <div class="metric"><span>FY2024–25</span><b id="routeNew">41.1%</b></div>
+      <div class="bar"><div class="fill green" id="routeBarNew" style="--bar-width:41.1%"></div></div>
+      <div class="small" style="margin-top:16px">Source: Ministry of Steel Annual Report 2025–26, crude-steel production by process route. Shares are reported percentages and may not total exactly 100 because of rounding.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="eyebrow">Route shift · FY2020–21 → FY2024–25</div>
+    <div class="grid three route-shift-grid">
+      <div><div class="metric"><span>BOF</span><b>43.5% → 41.1%</b></div><div class="bar"><div class="fill" style="--bar-width:94.5%"></div></div></div>
+      <div><div class="metric"><span>EAF</span><b>28.4% → 20.8%</b></div><div class="bar"><div class="fill rust" style="--bar-width:73.2%"></div></div></div>
+      <div><div class="metric"><span>Induction Furnace</span><b>28.1% → 38.2%</b></div><div class="bar"><div class="fill green" style="--bar-width:100%"></div></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="section alt reveal" id="policy">
+<div class="wrap">
+  <div class="eyebrow">08 · The policy arc</div>
+  <h2>From building capacity to building competitiveness</h2>
+  <div class="grid">
+    <div class="card policy"><div class="policy-year">2005</div><div><h3 style="margin:0 0 5px;font-family:Georgia,serif">National Steel Policy 2005</h3><p style="margin:0;color:var(--muted)">Blueprint for a self-reliant and globally competitive steel sector; world-standard efficiency and productivity.</p><span class="tag">Efficiency</span><span class="tag">Productivity</span><span class="tag">Global competitiveness</span></div></div>
+    <div class="card policy"><div class="policy-year">2017</div><div><h3 style="margin:0 0 5px;font-family:Georgia,serif">National Steel Policy 2017</h3><p style="margin:0;color:var(--muted)">Roadmap toward a technologically advanced and globally competitive industry, with raw-material security, R&amp;D, investment, productivity and quality at the centre.</p><span class="tag">300 MTPA capacity target</span><span class="tag">Technology</span><span class="tag">Raw materials</span></div></div>
+    <div class="card policy"><div class="policy-year">2021</div><div><h3 style="margin:0 0 5px;font-family:Georgia,serif">PLI for Specialty Steel</h3><p style="margin:0;color:var(--muted)">Financial incentives to attract investment, generate employment and promote technology upgradation in coated, high-strength, specialty rail, alloy, wire and electrical steels.</p><span class="tag">Specialty steel</span><span class="tag">Investment</span><span class="tag">Technology</span></div></div>
+    <div class="card policy"><div class="policy-year">2025</div><div><h3 style="margin:0 0 5px;font-family:Georgia,serif">Scale + resilience + digitalisation</h3><p style="margin:0;color:var(--muted)">PM GatiShakti mapping, mine digitisation, quality reforms, R&amp;D, specialty-steel PLI expansion and raw-material security measures are being layered onto the capacity base.</p><span class="tag">Logistics</span><span class="tag">Digital mines</span><span class="tag">Resilience</span></div></div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal" id="ambition">
+<div class="wrap">
+  <div class="eyebrow">09 · 2030–31 ambition</div>
+  <h2>The next capacity milestone is already defined</h2>
+  <div class="grid four">
+    <div class="card kpi"><div class="num">300</div><div class="label">MTPA crude-steel capacity</div><div class="sub">NSP 2017 projection for 2030–31.</div></div>
+    <div class="card kpi"><div class="num">255</div><div class="label">MTPA crude-steel demand/production</div><div class="sub">NSP 2017 projection.</div></div>
+    <div class="card kpi"><div class="num">230</div><div class="label">MTPA finished-steel demand/production</div><div class="sub">NSP 2017 projection.</div></div>
+    <div class="card kpi"><div class="num">158 kg</div><div class="label">Per-capita finished steel</div><div class="sub">NSP 2017 projection for 2030–31.</div></div>
+  </div>
+  <div class="callout" style="margin-top:22px">The report's policy arc is clear: scale is necessary, but the stated ambition is a technologically advanced, globally competitive, efficient and sustainable steel industry.</div>
+</div>
+</section>
+
+<section class="section alt reveal" id="takeaway">
+<div class="wrap">
+  <div class="eyebrow">10 · The intellectual takeaway</div>
+  <h2>What the numbers really say</h2>
+  <div class="grid three">
+    <div class="card"><h3 style="font-family:Georgia,serif">Scale</h3><p>India moved from about 1 MT of steel capacity at Independence to more than 160 MT of annual crude-steel production today.</p></div>
+    <div class="card"><h3 style="font-family:Georgia,serif">Structure</h3><p>The industry moved from an entirely private pre-Independence base, through public-sector-led nation building, to a predominantly private-sector production ecosystem.</p></div>
+    <div class="card"><h3 style="font-family:Georgia,serif">Capability</h3><p>The agenda has widened from tonnes and capacity to specialty steel, R&amp;D, digital mines, resource efficiency, recycling, logistics and low-carbon technologies.</p></div>
+  </div>
+  <div style="margin-top:26px;text-align:center">
+    <div class="eyebrow">The 2047 lens</div>
+    <h2 style="max-width:900px;margin:10px auto">India has built a globally significant steel industry since Independence. The next question is: what kind of metals ecosystem will it build by 2047?</h2>
+  </div>
+</div>
+</section>
+
+
+<div class="small" style="margin-top:12px">
+  Image sources:
+  <span>Bhilai Steel Plant, 2018</span>;
+  <span>Bhilai Steel Plant, 2009</span>;
+  <span>Open-cast mining</span>;
+  <span>Iron ore mining</span>.
+</div>
+
+<footer>
+<div class="wrap">
+  <p><strong>Source:</strong> Government of India, Ministry of Steel, <em>Annual Report 2025–26</em>, especially Chapters I, III, IV, VII–XI and relevant annexures.</p>
+  <p>All figures marked provisional are reproduced as provisional. Calendar-year 2025 global ranking and FY 2025–26 figures are kept distinct. Historical 1947 capacity is not presented as a production figure.</p>
+  <p>Prepared as a source-led editorial infographic. It is not an official Government of India publication.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+  const $ = (s,root=document)=>root.querySelector(s);
+  const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
+
+  // Scroll progress + reveal animation
+  const progress = $('#progress'), topbar = $('#topbar'), backtop = $('#backtop');
+  function onScroll(){
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = (max > 0 ? (scrollY/max)*100 : 0) + '%';
+    topbar.classList.toggle('visible', scrollY > 260);
+    backtop.classList.toggle('show', scrollY > 700);
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{threshold:.12});
+  $$('.reveal,.card').forEach(el=>observer.observe(el));
+
+  // Smooth section navigation
+  $$('.navlinks button').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const el = document.getElementById(btn.dataset.target);
+      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  $('#backtop').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+  // Dark mode
+  const saved = localStorage.getItem('steel-theme');
+  if(saved==='dark') document.body.classList.add('dark');
+  $('#themeBtn').addEventListener('click',()=>{
+    document.body.classList.toggle('dark');
+    localStorage.setItem('steel-theme',document.body.classList.contains('dark')?'dark':'light');
+  });
+
+  // Print
+  $('#printBtn').addEventListener('click',()=>window.print());
+
+  // Animated numeric counters
+  function animateCounter(el){
+    if(el.dataset.done) return;
+    const raw = el.textContent.trim();
+    const match = raw.match(/([0-9][0-9,]*(?:\.[0-9]+)?)/);
+    if(!match) return;
+    const value = parseFloat(match[1].replace(/,/g,''));
+    if(!isFinite(value)) return;
+    const prefix = raw.slice(0,match.index), suffix = raw.slice(match.index+match[0].length);
+    const decimals = (match[0].split('.')[1]||'').length;
+    const start = performance.now(), dur=1050;
+    function tick(t){
+      const p=Math.min(1,(t-start)/dur), eased=1-Math.pow(1-p,3);
+      const current=value*eased;
+      el.textContent=prefix+current.toLocaleString('en-IN',{minimumFractionDigits:decimals,maximumFractionDigits:decimals})+suffix;
+      if(p<1) requestAnimationFrame(tick); else el.dataset.done='1';
+    }
+    requestAnimationFrame(tick);
+  }
+  const counterObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting) animateCounter(e.target)});
+  },{threshold:.7});
+  $$('.kpi .num').forEach(el=>counterObs.observe(el));
+
+  // Timeline active state
+  const timelineObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('active')});
+  },{threshold:.55});
+  $$('.timeline .titem').forEach(el=>timelineObs.observe(el));
+
+  // Tooltip system
+  const tooltip=$('#tooltip');
+  function showTip(text,x,y){
+    tooltip.textContent=text; tooltip.style.left=Math.min(x+14,innerWidth-300)+'px';
+    tooltip.style.top=Math.min(y+14,innerHeight-100)+'px'; tooltip.classList.add('show');
+  }
+  function hideTip(){tooltip.classList.remove('show')}
+  $$('[data-tip]').forEach(el=>{
+    el.addEventListener('mouseenter',e=>showTip(el.dataset.tip,e.clientX,e.clientY));
+    el.addEventListener('mousemove',e=>showTip(el.dataset.tip,e.clientX,e.clientY));
+    el.addEventListener('mouseleave',hideTip);
+    el.addEventListener('focus',e=>showTip(el.dataset.tip,innerWidth/2,100));
+    el.addEventListener('blur',hideTip);
+  });
+
+  // Interactive data explorer — figures taken from the report already represented in this infographic.
+  const series = {
+    production:{
+      title:'Crude steel production',
+      unit:'MT',
+      labels:['2021–22','2022–23','2023–24','2024–25'],
+      values:[120.293,127.197,144.299,152.180],
+      note:['FY 2021–22','FY 2022–23','FY 2023–24','FY 2024–25']
+    },
+    consumption:{
+      title:'Finished steel consumption',
+      unit:'MT',
+      labels:['2020–21','2021–22','2022–23','2023–24','2024–25'],
+      values:[94.89,105.75,119.89,136.29,152.13],
+      note:['FY 2020–21','FY 2021–22','FY 2022–23','FY 2023–24','FY 2024–25']
+    },
+    capacity:{
+      title:'Crude steel capacity',
+      unit:'MT',
+      labels:['2021–22','2024–25','Apr–Dec 2025–26'],
+      values:[154.062,200.333,218.296],
+      note:['FY 2021–22','FY 2024–25','Provisional Apr–Dec 2025–26']
+    },
+    trade:{
+      title:'Finished steel trade',
+      unit:'MT',
+      labels:['2021–22','2024–25'],
+      values:[13.494,4.858],
+      secondary:[4.669,9.551],
+      secondaryName:'Imports',
+      note:['FY 2021–22','FY 2024–25']
+    }
+  };
+  const chart=$('#dataChart'), insightValue=$('#insightValue'), insightTitle=$('#insightTitle'),
+        insightCopy=$('#insightCopy'), startValue=$('#startValue'), latestValue=$('#latestValue'),
+        startLabel=$('#startLabel'), latestLabel=$('#latestLabel');
+
+  function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+
+  function drawSeries(key){
+    const d=series[key], W=760,H=320,L=56,R=20,T=24,B=56;
+    const vals=d.secondary ? d.values.concat(d.secondary) : d.values;
+    const min=0, max=Math.max(...vals)*1.16;
+    const x=i=>L+i*(W-L-R)/Math.max(1,d.labels.length-1);
+    const y=v=>H-B-(v-min)/(max-min)*(H-B-T);
+    const points=d.values.map((v,i)=>[x(i),y(v)]);
+    const line=points.map(p=>p.join(',')).join(' ');
+    const area=`M ${points[0][0]} ${H-B} L ${points.map(p=>p.join(' ')).join(' L ')} L ${points[points.length-1][0]} ${H-B} Z`;
+    let out='';
+    for(let g=0;g<5;g++){
+      const gy=T+g*(H-B-T)/4, val=Math.round(max*(1-g/4));
+      out+=`<line x1="${L}" y1="${gy}" x2="${W-R}" y2="${gy}" stroke="currentColor" opacity=".10"/>`;
+      out+=`<text x="8" y="${gy+4}">${val}</text>`;
+    }
+    out+=`<path class="area" d="${area}"></path><polyline class="line" points="${line}"></polyline>`;
+    d.labels.forEach((lab,i)=>{
+      out+=`<text x="${x(i)}" y="${H-25}" text-anchor="middle">${esc(lab)}</text>`;
+      out+=`<circle class="point" tabindex="0" data-i="${i}" cx="${x(i)}" cy="${y(d.values[i])}" r="6"></circle>`;
+      out+=`<text x="${x(i)}" y="${y(d.values[i])-14}" text-anchor="middle" font-weight="800">${d.values[i]}</text>`;
+    });
+    if(d.secondary){
+      const secPts=d.secondary.map((v,i)=>[x(i),y(v)]);
+      out+=`<polyline points="${secPts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="var(--rust)" stroke-width="3" stroke-dasharray="7 6"></polyline>`;
+      d.secondary.forEach((v,i)=>out+=`<circle cx="${x(i)}" cy="${y(v)}" r="5" fill="var(--rust)"></circle>`);
+      out+=`<text x="${W-R}" y="18" text-anchor="end" fill="var(--rust)">Imports</text>`;
+      out+=`<text x="${L}" y="18" fill="var(--blue)">Exports</text>`;
+    }
+    chart.innerHTML=out;
+    $$('.point',chart).forEach(pt=>{
+      const i=+pt.dataset.i;
+      const update=()=>{
+        insightValue.textContent=d.labels[i];
+        insightTitle.textContent=d.title;
+        let copy=`Reported value: ${d.values[i]} ${d.unit}. ${d.note[i]}.`;
+        if(key==='trade') copy += ` Exports ${d.values[i]} MT; imports ${d.secondary[i]} MT.`;
+        insightCopy.textContent=copy;
+        startValue.textContent=d.values[0];
+        latestValue.textContent=d.values[d.values.length-1];
+        startLabel.textContent=d.unit;
+        latestLabel.textContent=d.unit;
+      };
+      pt.addEventListener('click',update);
+      pt.addEventListener('mouseenter',e=>showTip(`${d.labels[i]} · ${d.values[i]} ${d.unit}`,e.clientX,e.clientY));
+      pt.addEventListener('mousemove',e=>showTip(`${d.labels[i]} · ${d.values[i]} ${d.unit}`,e.clientX,e.clientY));
+      pt.addEventListener('mouseleave',hideTip);
+      pt.addEventListener('focus',update);
+      pt.addEventListener('blur',hideTip);
+    });
+    insightTitle.textContent=d.title;
+    insightCopy.textContent=`The series contains ${d.values.length} reported points. Select a point to inspect it.`;
+    startValue.textContent=d.values[0]; latestValue.textContent=d.values[d.values.length-1];
+    startLabel.textContent=d.unit; latestLabel.textContent=d.unit;
+  }
+  $$('.explorer-controls button').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      $$('.explorer-controls button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active'); drawSeries(btn.dataset.series);
+    });
+  });
+  drawSeries('production');
+
+  // Make route nodes keyboard/focus friendly
+  $$('.route .node[data-tip]').forEach(node=>{
+    node.tabIndex=0;
+    node.addEventListener('click',()=>node.classList.toggle('active'));
+    node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();node.classList.toggle('active')}});
+  });
+
+
+// Route mix explorer
+const routeData = {
+  BOF:{name:'Basic Oxygen Furnace (BOF)',new:'41.1%',old:'43.5%',color:'#1c5d91',
+      copy:'BOF remained the largest single crude-steel route in FY2024–25, although its share declined from 43.5% in FY2020–21.'},
+  IF:{name:'Induction Furnace (IF)',new:'38.2%',old:'28.1%',color:'#4f7657',
+      copy:'The induction-furnace route increased its share from 28.1% to 38.2% over the five-year comparison shown in the Ministry report.'},
+  EAF:{name:'Electric Arc Furnace (EAF)',new:'20.8%',old:'28.4%',color:'#b55c37',
+      copy:'EAF accounted for 20.8% of crude-steel production in FY2024–25, compared with 28.4% in FY2020–21.'}
+};
+function updateRoute(key){
+  const d=routeData[key];
+  document.querySelectorAll('.route-legend-item').forEach(b=>b.classList.toggle('active',b.dataset.route===key));
+  document.getElementById('routeInsightTitle').textContent=d.name;
+  document.getElementById('routeInsightStat').textContent=d.new;
+  document.getElementById('routeInsightCopy').textContent=d.copy;
+  document.getElementById('routeOld').textContent=d.old;
+  document.getElementById('routeNew').textContent=d.new;
+  document.getElementById('routeBarOld').style.setProperty('--bar-width',d.old);
+  document.getElementById('routeBarNew').style.setProperty('--bar-width',d.new);
+}
+document.querySelectorAll('.route-legend-item').forEach(b=>b.addEventListener('click',()=>updateRoute(b.dataset.route)));
+
+  // Keyboard shortcuts
+  addEventListener('keydown',e=>{
+    if(e.key.toLowerCase()==='t' && !/input|textarea/i.test(document.activeElement.tagName)) $('#themeBtn').click();
+    if(e.key==='Home' && !e.ctrlKey && !/input|textarea/i.test(document.activeElement.tagName)) scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+
+</body>
+</html>
